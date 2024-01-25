@@ -20,7 +20,7 @@ export default function DeleteUser(data: Data) {
     setIsMutating(true);
     const token = await GetToken();
 
-    await fetch(`http://127.0.0.1:8000/api/EarlyAccess/${data.id}`, {
+    await fetch(`https://laravel.roulete.tech/api/EarlyAccess/${data.id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

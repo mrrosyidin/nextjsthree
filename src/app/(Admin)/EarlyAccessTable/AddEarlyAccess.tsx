@@ -15,7 +15,7 @@ export default function AddUser() {
 
     setIsMutating(true);
 
-    await fetch(`http://127.0.0.1:8000/api/EarlyRegister`, {
+    await fetch(`https://laravel.roulete.tech/api/EarlyRegister`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",

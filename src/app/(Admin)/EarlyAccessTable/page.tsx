@@ -11,7 +11,7 @@ interface Data {
 async function getEarlyAccess() {
   const cookieStore = cookies().get("Token")?.value;
 
-  const res = await fetch("http://127.0.0.1:8000/api/EarlyAccess", {
+  const res = await fetch("https://laravel.roulete.tech/api/EarlyAccess", {
     headers: {
       Authorization: `Bearer ${cookieStore}`,
       "Content-Type": "application/json",

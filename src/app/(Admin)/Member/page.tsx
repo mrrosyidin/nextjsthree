@@ -12,7 +12,7 @@ async function getUser() {
   const cookieStore = cookies().get("Token")?.value;
   console.log(cookieStore);
 
-  const res = await fetch("http://127.0.0.1:8000/api/User", {
+  const res = await fetch("https://laravel.roulete.tech/api/User", {
     method: "get",
     headers: {
       Authorization: `Bearer ${cookieStore}`,

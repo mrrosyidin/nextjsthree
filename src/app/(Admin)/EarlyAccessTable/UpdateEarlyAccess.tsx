@@ -35,7 +35,7 @@ export default function UpdateUser(data: Data): JSX.Element {
     };
 
     await fetch(
-      `http://127.0.0.1:8000/api/EarlyAccess/${data.id}`,
+      `https://laravel.roulete.tech/api/EarlyAccess/${data.id}`,
       requestOptions
     );
 

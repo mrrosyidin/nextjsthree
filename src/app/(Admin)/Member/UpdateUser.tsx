@@ -36,7 +36,10 @@ export default function UpdateUser(data: Data): JSX.Element {
       }),
     };
 
-    await fetch(`http://127.0.0.1:8000/api/User/${data.id}`, requestOptions);
+    await fetch(
+      `https://laravel.roulete.tech/api/User/${data.id}`,
+      requestOptions
+    );
 
     setIsMutating(false);
 
