@@ -17,10 +17,14 @@ export default function AddUser() {
 
     setIsMutating(true);
 
-    await axios.post("", {
-      email,
-      password,
+    const response = await fetch(`https://laravel.roulete.tech/api/register`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email: email, password: password }),
     });
+    console.log(response);
 
     setIsMutating(false);
 

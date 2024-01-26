@@ -26,16 +26,13 @@ export default function LoginRegisterModal() {
     setIsMutating(true);
 
     if (isLogin) {
-      const response = await fetch(
-        "https://laravel.roulete.tech/api/EarlyRegister/api/login",
-        {
-          method: "post",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email: email, password: password }),
-        }
-      );
+      const response = await fetch("https://laravel.roulete.tech/api/login", {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: email, password: password }),
+      });
       console.log(response);
       if (response.ok) {
         const responseData: Data = await response.json();
